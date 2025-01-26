@@ -1,0 +1,154 @@
+[
+    {
+        "Title": "Slack Token",
+        "Regex": "(?:['\"`])?(xox[pboa]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})(?:['\"`])?"
+    },
+    {
+        "Title": "RSA private key",
+        "Regex": "(?:['\"`])?(-----BEGIN RSA PRIVATE KEY-----)(?:['\"`])?"
+    },
+    {
+        "Title": "SSH (DSA) private key",
+        "Regex": "(?:['\"`])?(-----BEGIN DSA PRIVATE KEY-----)(?:['\"`])?"
+    },
+    {
+        "Title": "SSH (EC) private key",
+        "Regex": "(?:['\"`])?(-----BEGIN EC PRIVATE KEY-----)(?:['\"`])?"
+    },
+    {
+        "Title": "PGP private key block",
+        "Regex": "(?:['\"`])?(-----BEGIN PGP PRIVATE KEY BLOCK-----)(?:['\"`])?"
+    },
+    {
+        "Title": "Amazon MWS Auth Token",
+        "Regex": "(?:['\"`])?(amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})(?:['\"`])?"
+    },
+    {
+        "Title": "AWS AppSync GraphQL Key",
+        "Regex": "(?:['\"`])?(da2-[a-z0-9]{26})(?:['\"`])?"
+    },
+    {
+        "Title": "Facebook Access Token",
+        "Regex": "(?:['\"`])?(EAACEdEose0cBA[0-9A-Za-z]+)(?:['\"`])?"
+    },
+    {
+        "Title": "Facebook OAuth",
+        "Regex": "(?:['\"`])?([fF][aA][cC][eE][bB][oO][oO][kK].{0,20}['|\"][0-9a-f]{32}['|\"])(?:['\"`])?"
+    },
+    {
+        "Title": "GitHub",
+        "Regex": "(?:['\"`])?([gG][iI][tT][hH][uU][bB].{0,20}['|\"][0-9a-zA-Z]{35,40}['|\"])(?:['\"`])?"
+    },
+    {
+        "Title": "GitHub Personal Access Token",
+        "Regex": "(?:['\"`])?(ghp_[a-zA-Z0-9]{36})(?:['\"`])?"
+    },
+    {
+        "Title": "Google API Key",
+        "Regex": "(?:['\"`])?(AIza[0-9A-Za-z\\-_]{35})(?:['\"`])?"
+    },
+    {
+        "Title": "Google Cloud Platform OAuth",
+        "Regex": "(?:['\"`])?([0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com)(?:['\"`])?"
+    },
+    {
+        "Title": "Google Drive OAuth",
+        "Regex": "(?:['\"`])?([0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com)(?:['\"`])?"
+    },
+    {
+        "Title": "Google (GCP) Service-account",
+        "Regex": "(?:['\"`])?(\"type\": \"service_account\")(?:['\"`])?"
+    },
+    {
+        "Title": "Google Gmail OAuth",
+        "Regex": "(?:['\"`])?([0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com)(?:['\"`])?"
+    },
+    {
+        "Title": "Google OAuth Access Token",
+        "Regex": "(?:['\"`])?(ya29\\.[0-9A-Za-z\\-_]+)(?:['\"`])?"
+    },
+    {
+        "Title": "Google YouTube OAuth",
+        "Regex": "(?:['\"`])?([0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com)(?:['\"`])?"
+    },
+    {
+        "Title": "Heroku API Key",
+        "Regex": "(?:['\"`])?([hH][eE][rR][oO][kK][uU].{0,20}[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})(?:['\"`])?"
+    },
+    {
+        "Title": "Json Web Token",
+        "Regex": "(?:['\"`])?(eyJhbGciOiJ)(?:['\"`])?"
+    },
+    {
+        "Title": "MailChimp API Key",
+        "Regex": "(?:['\"`])?([0-9a-f]{32}-us[0-9]{1,2})(?:['\"`])?"
+    },
+    {
+        "Title": "Mailgun API Key",
+        "Regex": "(?:['\"`])?(key-[0-9a-zA-Z]{32})(?:['\"`])?"
+    },
+    {
+        "Title": "Password in URL",
+        "Regex": "(?:['\"`])?([a-zA-Z]{3,10}://[^/\\s:@]{3,20}:[^/\\s:@]{3,20}@.{1,100}[\"'\\s])(?:['\"`])?"
+    },
+    {
+        "Title": "PayPal Braintree Access Token",
+        "Regex": "(?:['\"`])?(access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32})(?:['\"`])?"
+    },
+    {
+        "Title": "Picatic API Key",
+        "Regex": "(?:['\"`])?(sk_live_[0-9a-z]{32})(?:['\"`])?"
+    },
+    {
+        "Title": "Slack Webhook",
+        "Regex": "(?:['\"`])?(https://hooks\\.slack\\.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24})(?:['\"`])?"
+    },
+    {
+        "Title": "Stripe API Key",
+        "Regex": "(?:['\"`])?(sk_live_[0-9a-zA-Z]{24})(?:['\"`])?"
+    },
+    {
+        "Title": "Stripe Restricted API Key",
+        "Regex": "(?:['\"`])?(rk_live_[0-9a-zA-Z]{24})(?:['\"`])?"
+    },
+    {
+        "Title": "Square Access Token",
+        "Regex": "(?:['\"`])?(sq0atp-[0-9A-Za-z\\-_]{22})(?:['\"`])?"
+    },
+    {
+        "Title": "Square OAuth Secret",
+        "Regex": "(?:['\"`])?(sq0csp-[0-9A-Za-z\\-_]{43})(?:['\"`])?"
+    },
+    {
+        "Title": "Telegram Bot API Key",
+        "Regex": "(?:['\"`])?([0-9]+:AA[0-9A-Za-z\\-_]{33})(?:['\"`])?"
+    },
+    {
+        "Title": "Twilio API Key",
+        "Regex": "(?:['\"`])?(SK[0-9a-fA-F]{32})(?:['\"`])?"
+    },
+    {
+        "Title": "Github Auth Creds",
+        "Regex": "(?:['\"`])?(https://[a-zA-Z0-9]{40}@github\\.com)(?:['\"`])?"
+    },
+    {
+        "Title": "Twitter Access Token",
+        "Regex": "(?:['\"`])?([tT][wW][iI][tT][tT][eE][rR].*[1-9][0-9]+-[0-9a-zA-Z]{40})(?:['\"`])?"
+    },
+    {
+        "Title": "Twitter OAuth",
+        "Regex": "(?:['\"`])?([tT][wW][iI][tT][tT][eE][rR].*['|\"][0-9a-zA-Z]{35,44}['|\"])(?:['\"`])?"
+    },
+    {
+        "Title": "Generic API Key",
+        "Regex": "(?:['\"`])?([aA][pP][iI]_?[kK][eE][yY].{0,20}['|\"][0-9a-zA-Z]{32,45}['|\"])(?:['\"`])?"
+    },
+    {
+        "Title": "Generic Secret",
+        "Regex": "(?:['\"`])?([sS][eE][cC][rR][eE][tT].{0,20}['|\"][0-9a-zA-Z]{32,45}['|\"])(?:['\"`])?"
+    },
+    {
+        "Title": "AWS API Key",
+        "Regex": "(?:['\"`])?((?:A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16})(?:['\"`])?"
+    }
+]
