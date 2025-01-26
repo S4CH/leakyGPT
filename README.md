@@ -2,7 +2,7 @@
 <p align="center">
 <img src="banner.png" height="350px" width="500px">
 </p>
-<p align="center"><b>The one-stop browser-based DLP extension to to stop users from sharing sensitive information with chatGPT.</b></p>
+<p align="center"><b>The one-stop browser-based DLP extension to stop users from sharing sensitive information with chatGPT.</b></p>
 <br>
 
 ## Description:
