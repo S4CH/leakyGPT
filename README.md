@@ -3,7 +3,7 @@
 <img src="banner.png" height="350px" width="500px">
 </p>
 <p align="center"><b>The one-stop browser-based DLP extension to prevent any unintended secret exposures while interacting with chatGPT.</b></p>
-<br><br>
+<br>
 
 ## Description:
 Since OpenAI does <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance">admits</a> that they can use our data to train their models, the looming threat of secret leakge as part of user prompts had to be addressed. While OpenAI does take steps to reduce the amount of personal information going into their training datasets, no individual or organization would want their secret keys or tokens to be a part of the training data. This is a major issue for companies whose teams largely depend on ChatGPT for their day-to-day work and could be passing sensitive data as part of their prompts.
