@@ -1,19 +1,30 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "leakyGPT",
   "version": "1.0",
   "description": "The one-stop extension to prevent any unintended secret exposures while interacting with chatGPT.",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://chatgpt.com/*",
     "storage"
   ],
+  "host_permissions": [
+    "*://chatgpt.com/*"
+  ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "service_worker": "background.js"
   },
-  "web_accessible_resources": ["regexes.json"],
+  "web_accessible_resources": [{
+    "resources": ["regexes.json"],
+    "matches": ["<all_urls>"]
+  }],
+  "action": {
+    "default_icon": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
   "icons": {
     "16": "logo.png",
     "48": "logo.png",

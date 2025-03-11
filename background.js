@@ -1,27 +1,32 @@
-let pendingRequest = null;
 let regexes = [];
 
 function loadRegexes() {
-  fetch(chrome.runtime.getURL('regexes.json'))
-    .then(response => response.json())
-    .then(data => {
-      regexes = data.map(item => ({
+  chrome.storage.local.get('regexes', (result) => {
+    if (result.regexes) {
+      regexes = result.regexes.map(item => ({
         regex: new RegExp(item.Regex, 'i'),
         title: item.Title
       }));
-    })
-    .catch(err => console.error('Error loading regexes:', err));
+    } else {
+      fetch(chrome.runtime.getURL('regexes.json'))
+        .then(response => response.json())
+        .then(data => {
+          regexes = data.map(item => ({
+            regex: new RegExp(item.Regex, 'i'),
+            title: item.Title
+          }));
+          chrome.storage.local.set({ regexes: data });
+        })
+        .catch(err => console.error('Error loading regexes:', err));
+    }
+  });
 }
 
 chrome.runtime.onInstalled.addListener(() => {
   loadRegexes();
 });
 
-chrome.runtime.onStartup.addListener(() => {
-  loadRegexes();
-});
-
-chrome.webRequest.onBeforeRequest.addListener(
+chrome.declarativeNetRequest.onBeforeRequest.addListener(
   function(details) {
     if (details.url.includes('/backend-api/conversation')) {
       if (details.requestBody && details.requestBody.raw) {
@@ -48,8 +53,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             }
           }
         }
-
-        pendingRequest = details;
 
         return { cancel: false };
       }
